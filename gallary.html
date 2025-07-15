@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UMA Nursing College - Excellence in Healthcare Education</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center">
+                    <img src="images/WhatsApp_Image_2025-07-12_at_12.27.49_cbc7617a-removebg-preview.png" alt="uma logo" class="h-55 w-20 mr-2">
+                    <span class="text-xl font-bold text-blue-800">Uma Nursing College , Unjha</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition duration-300">Home</a>
+                    <a href="aboutus.html" class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition duration-300">About</a>
+                    <a href="program.html" class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition duration-300">Programs</a>
+                    <a href="contactus.html" class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition duration-300">Contact</a>
+                    <a href="admission.html" class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition duration-300">Admission</a>
+                    <a href="gallary.html" class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition duration-300">Gallery</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="menu-btn" class="text-gray-700 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white pb-4 px-4">
+            <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-blue-50">Home</a>
+            <a href="aboutus.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-blue-50">About</a>
+            <a href="program.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-blue-50">Programs</a>
+            <a href="contactus.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-blue-50">Contact</a>
+            <a href="admission.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-blue-50">Admissions</a>
+            <a href="gallary.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-blue-50">Gallery</a>
+
+
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+  id="home"
+  class="hero flex items-center justify-center text-white pt-20"
+  style="background: url('images/stethoscope-black-background-top-view-space-text_206268-10818.avif')  center / cover no-repeat;">
+        <div class="text-center px-4">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">Shaping the Future of <span class="text-yellow-400">Healthcare</span></h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">UMA Nursing College provides world-class nursing education with state-of-the-art facilities and experienced faculty.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="program.html" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 transform hover:scale-105">Explore Programs</a>
+                <a href="#contact" class="bg-transparent hover:bg-white hover:text-blue-800 text-white font-bold py-3 px-6 border-2 border-white rounded-lg transition duration-300 transform hover:scale-105">Contact Us</a>
+            </div>
+        </div>
+    </section>
+    
+    
+    <main class="container mx-auto px-4 py-12">
+        <section class="mb-16 text-center">
+            <h2 class="text-4xl font-bold text-indigo-900 mb-4">Our College Gallery</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Explore life at St. Florence Nursing College through our photo gallery showcasing campus facilities, student experiences, clinical training, and faculty.
+            </p>
+        </section>
+
+        <section class="mb-12">
+            <div class="flex flex-wrap justify-center gap-4 mb-8">
+                <button class="category-btn active px-6 py-2 rounded-full bg-indigo-900 text-white" data-category="all">All</button>
+                <button class="category-btn px-6 py-2 rounded-full border border-gray-300 hover:bg-gray-100" data-category="campus">Campus</button>
+                <button class="category-btn px-6 py-2 rounded-full border border-gray-300 hover:bg-gray-100" data-category="students">Students</button>
+                <button class="category-btn px-6 py-2 rounded-full border border-gray-300 hover:bg-gray-100" data-category="clinical">Clinical Training</button>
+                <button class="category-btn px-6 py-2 rounded-full border border-gray-300 hover:bg-gray-100" data-category="faculty">Faculty</button>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 gallery-container">
+                <!-- Campus Facilities -->
+                <div class="gallery-item rounded-lg overflow-hidden bg-white shadow-sm" data-category="campus">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/98d8ca5e-53a0-4503-9ade-740b2b2249f4.png" alt="Modern nursing college building with glass facade and green spaces" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg mb-1">Main Campus</h3>
+                        <p class="text-gray-600 text-sm">Our state-of-the-art academic building</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item rounded-lg overflow-hidden bg-white shadow-sm" data-category="campus">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/b2ea4a25-fd93-46a6-8461-dd17fbcd3a61.png" alt="Modern nursing college library with study carrels and medical references" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg mb-1">Medical Library</h3>
+                        <p class="text-gray-600 text-sm">Extensive collection of nursing resources</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item rounded-lg overflow-hidden bg-white shadow-sm" data-category="campus">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/9c8411e8-3f19-4d17-941a-d1d356042d72.png" alt="Nursing skills lab with hospital beds and medical mannequins" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg mb-1">Simulation Labs</h3>
+                        <p class="text-gray-600 text-sm">High-tech training environment</p>
+                    </div>
+                </div>
+
+                <!-- Student Life -->
+                <div class="gallery-item rounded-lg overflow-hidden bg-white shadow-sm" data-category="students">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/332d9a46-4b0c-4870-b8d0-a4dd6ec40b6b.png" alt="Nursing students engaged in classroom learning with instructor" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg mb-1">Interactive Learning</h3>
+                        <p class="text-gray-600 text-sm">Students engaged in classroom discussion</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item rounded-lg overflow-hidden bg-white shadow-sm" data-category="students">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/d1313464-9d6d-42cd-ade5-03c3c61b48d4.png" alt="Diverse group of nursing students collaborating in study session" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg mb-1">Collaborative Study</h3>
+                        <p class="text-gray-600 text-sm">Students working together</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item rounded-lg overflow-hidden bg-white shadow-sm" data-category="students">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/c372183e-22f6-4247-96ac-41ed4921274a.png" alt="Nursing graduates in white uniforms holding diplomas" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg mb-1">Graduation Day</h3>
+                        <p class="text-gray-600 text-sm">Proud moment for our graduates</p>
+                    </div>
+                </div>
+
+                <!-- Clinical Training -->
+                <div class="gallery-item rounded-lg overflow-hidden bg-white shadow-sm" data-category="clinical">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/c22b23b8-618c-48d2-a362-69b1b9e214e5.png" alt="Nursing student performing blood pressure check on patient in hospital setting" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg mb-1">Patient Assessment</h3>
+                        <p class="text-gray-600 text-sm">Hands-on clinical training</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item rounded-lg overflow-hidden bg-white shadow-sm" data-category="clinical">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/d0317aaa-7009-4b07-a5b8-ebbf69227e43.png" alt="Nursing students practicing IV insertion on medical mannequin arm" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg mb-1">Skills Practice</h3>
+                        <p class="text-gray-600 text-sm">Perfecting clinical techniques</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item rounded-lg overflow-hidden bg-white shadow-sm" data-category="clinical">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/7af4cf81-1fac-4647-8ac9-2272b2ba2c9c.png" alt="Nursing student and instructor reviewing patient chart in hospital ward" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg mb-1">Hospital Rotation</h3>
+                        <p class="text-gray-600 text-sm">Real-world clinical experience</p>
+                    </div>
+                </div>
+
+                <!-- Faculty -->
+                <div class="gallery-item rounded-lg overflow-hidden bg-white shadow-sm" data-category="faculty">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/58228387-ee40-4402-9e45-bf9077cf4b54.png" alt="Seasoned nursing professor teaching at whiteboard in classroom" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg mb-1">Expert Instruction</h3>
+                        <p class="text-gray-600 text-sm">Our experienced faculty</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item rounded-lg overflow-hidden bg-white shadow-sm" data-category="faculty">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/652bf3be-45b4-430e-8d59-b54da2c8f803.png" alt="Nursing faculty member guiding student through patient care scenario" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg mb-1">One-on-One Mentoring</h3>
+                        <p class="text-gray-600 text-sm">Personalized guidance</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item rounded-lg overflow-hidden bg-white shadow-sm" data-category="faculty">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/a9240886-4b33-4429-b932-e715dcfdaa41.png" alt="Nursing faculty presenting research findings at academic conference" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg mb-1">Faculty Research</h3>
+                        <p class="text-gray-600 text-sm">Advancing nursing knowledge</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+       
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-about">
+                    <div class="footer-logo-container">
+                    <div class="footer-logo">
+                        <img src="images/WhatsApp_Image_2025-07-12_at_12.27.49_cbc7617a-removebg-preview.png" alt="UMA Nursing College footer logo" />
+                    </div>
+                    </div>
+                    <p>UMA Nursing College is committed to providing excellence in nursing education through innovative programs and clinical experiences that prepare students for successful careers in healthcare.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">-> Home</a></li>
+                        <li><a href="about.html">-> About Us</a></li>
+                        <li><a href="programs.html">-> Academic Programs</a></li>
+                        <li><a href="admissions.html">-> Admissions</a></li>
+                        <li><a href="contact.html">-> Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>Programs</h3>
+                    <ul>
+                        <li><a href="#">-> B.SC.Nursing</a></li>
+                        <li><a href="#">-> GNM</a></li>
+                        <li><a href="#">-> ANM</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Kanya Chhatralaya Road , Mahila College Campus , Saradar Chok , Unjha-384170</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <p>+91 9510022040</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>umanursingcollege2023@gmail.com</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <p>Monday - Saturday: 9:00 AM - 5:00 PM</p>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 UMA Nursing College. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!-- Floating Action Button -->
+    <a href="contactus.html" class="floating-btn fixed bottom-8 right-8 bg-blue-600 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:bg-blue-700 transition duration-300 z-50">
+        <i class="fas fa-comment-dots text-2xl"></i>
+    </a>
+
+    <!-- Back to Top Button -->
+    <a href="#home" id="back-to-top" class="fixed bottom-24 right-8 bg-gray-700 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg hover:bg-gray-800 transition duration-300 opacity-0 invisible z-50">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="fixed inset-0 z-50 modal-overlay flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300">
+        <div class="relative max-w-5xl w-full p-4">
+            <button id="closeModal" class="absolute -top-12 right-0 text-white text-4xl">&times;</button>
+            <div class="bg-white rounded-lg overflow-hidden shadow-xl">
+                <img id="modalImage" src="" alt="Larger view of selected gallery image" class="w-full max-h-[80vh] object-contain" src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/a253ca7f-d53e-4b36-9d83-f8946ad23ce8.png">
+                <div class="p-4 bg-white">
+                    <h3 id="modalTitle" class="text-xl font-semibold"></h3>
+                    <p id="modalDesc" class="text-gray-600"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="gallary.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

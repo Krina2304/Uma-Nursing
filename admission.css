@@ -1,0 +1,96 @@
+
+/* ——— wrapper & title ——— */
+.table-wrapper {
+  padding: 2rem 1rem;
+  max-width: 1100px;
+  padding: 0 1rem;  
+  border-radius: 8 px;
+  background: transparent;
+}
+
+#title{
+    text-align: center;    
+}
+
+
+.admission{
+    width: 80%;
+    text-align: justify;
+    margin-top: 30px;
+    margin: 0 auto; 
+    font-size: large;
+}
+
+/* ——— data table ——— */
+table {
+  width: 80%;
+  margin: 0 auto; 
+  margin-top: 30px;
+  height: 500px;
+  border-collapse: collapse;
+  background:transparent;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  overflow: hidden; /* round‑corner clipping */
+}
+
+thead {
+  background:transparent;
+}
+
+th,
+td {
+  padding: 0.75rem 0.9rem;
+  text-align: center;
+  border-bottom: 2px solid #060606;
+  border: 2px solid black;
+}
+
+th {
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: 2px solid black;
+
+}
+
+tbody tr:last-child td {
+  border-bottom:2px solid #060606 ;
+}
+
+td small {
+  font-size: 0.75rem;
+  color: #555;
+}
+
+
+/* ——— responsive ——— */
+@media (max-width: 780px) {
+  thead {
+    display: none; /* hide header */
+  }
+  table,
+  tbody,
+  tr,
+  td {
+    display: block;
+    width: 100%;
+  }
+  tr {
+    margin-bottom: 1rem;
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgb(0 0 0 / 4%);
+  }
+  td {
+    border: none;
+    padding: 0.7rem 1rem;
+    position: relative;
+  }
+  td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    display: block;
+    margin-bottom: 0.35rem;
+    color: #374151;
+  }
+}
+
