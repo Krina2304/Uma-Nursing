@@ -1,10 +1,32 @@
-        // Mobile menu toggle
-        document.getElementById('menu-btn').addEventListener('click', function() {
-            document.getElementById('mobile-menu').classList.toggle('hidden');
-        });
-        
+document.addEventListener('DOMContentLoaded', () => {
+  const menuBtn     = document.getElementById('menu-btn');
+  const menuIcon    = menuBtn.querySelector('i');
+  const mobileMenu  = document.getElementById('mobile-menu');
+
+  menuBtn.addEventListener('click', () => {
+    // 1. Toggle menu visibility
+    mobileMenu.classList.toggle('hidden');
+
+    // 2. Swap icon between hamburger and close
+    const menuIsOpen = !mobileMenu.classList.contains('hidden');
+    menuIcon.classList.toggle('fa-bars', !menuIsOpen);  // show bars when closed
+    menuIcon.classList.toggle('fa-times', menuIsOpen);  // show × when open
+  });
+
+  /* (Optional) Close menu when a link is clicked on small screens */
+  mobileMenu.querySelectorAll('a').forEach(link =>
+    link.addEventListener('click', () => {
+      if (window.innerWidth < 768) {
+        mobileMenu.classList.add('hidden');
+        menuIcon.classList.add('fa-bars');
+        menuIcon.classList.remove('fa-times');
+      }
+    })
+  );
+});
+
         // Counter animation
-        function animateCounter(elementId, target, duration = 2000) {
+        function animateCounter(elementId, target, duration = 1000) {
             const element = document.getElementById(elementId);
             const start = 0;
             const increment = target / (duration / 16);
@@ -24,8 +46,8 @@
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    animateCounter('years-counter', 28);
-                    animateCounter('students-counter', 1200);
+                    animateCounter('years-counter', 2);
+                    animateCounter('students-counter', 250);
                     observer.unobserve(entry.target);
                 }
             });

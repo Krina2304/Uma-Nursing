@@ -22,3 +22,7 @@
             background-color: var(--primary);
             color: white;
         }
+ .modal-active {
+      opacity: 1 !important;
+      pointer-events: auto !important;
+    }

@@ -4,7 +4,7 @@
   padding: 2rem 1rem;
   max-width: 1100px;
   padding: 0 1rem;  
-  border-radius: 8 px;
+  border-radius: 0px;
   background: transparent;
 }
 
@@ -31,6 +31,7 @@ table {
   background:transparent;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
   overflow: hidden; /* round‑corner clipping */
+  border-radius: 0;
 }
 
 thead {
@@ -43,54 +44,65 @@ td {
   text-align: center;
   border-bottom: 2px solid #060606;
   border: 2px solid black;
+  border-radius: 0;
 }
 
 th {
   font-size: 0.9rem;
   font-weight: 600;
   border: 2px solid black;
+  border-radius: 0;
+
 
 }
 
 tbody tr:last-child td {
-  border-bottom:2px solid #060606 ;
+  border-bottom:1px solid #060606 ;
+border-radius: 0%;
 }
 
 td small {
   font-size: 0.75rem;
   color: #555;
+    border-radius: 0;
+
 }
 
 
-/* ——— responsive ——— */
-@media (max-width: 780px) {
-  thead {
-    display: none; /* hide header */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
   }
-  table,
-  tbody,
-  tr,
-  td {
-    display: block;
-    width: 100%;
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
-  tr {
-    margin-bottom: 1rem;
-    background: #fff;
-    border-radius: 6px;
-    box-shadow: 0 2px 6px rgb(0 0 0 / 4%);
-  }
-  td {
-    border: none;
-    padding: 0.7rem 1rem;
-    position: relative;
-  }
-  td::before {
-    content: attr(data-label);
-    font-weight: 600;
-    display: block;
-    margin-bottom: 0.35rem;
-    color: #374151;
+}
+
+.animate-slide-in {
+  animation: slideIn 0.8s ease-out;
+}
+
+.table-scroll-wrapper::-webkit-scrollbar {
+  height: 3px;
+    border-radius: 10px;
+
+}
+
+.table-scroll-wrapper::-webkit-scrollbar-thumb {
+  background-color: #393333; /* Tailwind blue-300 */
+}
+
+.table-scroll-wrapper::-webkit-scrollbar-track {
+  background: #e0f2fe; /* Tailwind blue-100 */
+}
+@media (max-width: 768px) {
+  #eligibilityTable {
+    min-width: 750px;
+    font-size: 13px;
+      border-radius: 0;
+
   }
 }
 
